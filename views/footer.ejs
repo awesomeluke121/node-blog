@@ -1,0 +1,22 @@
+  <script type="text/javascript">
+    $(document).ready( function () {
+      // delay清除成功、失敗提示信息出現 
+      if ($('.ui.success.message').length > 0) {
+        $('.ui.success.message').fadeOut(1000)
+      } else if ($('.ui.error.message').length > 0) {
+        $('.ui.error.message').fadeOut(1000)
+      }
+      
+      //  點擊按鈕出現下拉單
+      $('.ui.dropdown').dropdown();
+      
+      // 滑鼠指到大頭貼顯示氣泡
+      $('.post-content .avatar-link').popup({
+        inline: true,
+        position: 'bottom right',
+        lastResort: 'bottom right'
+      });
+    })
+  </script>
+  </body>
+</html>
